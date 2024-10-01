@@ -11,7 +11,7 @@ import org.springframework.data.domain.Auditable;
 
 @MappedSuperclass
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-public class CommonObject extends Auditable<String> {
+public class CommonObject  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -57,6 +57,5 @@ public class CommonObject extends Auditable<String> {
     public String toString() {
         return "CommonObject [id=" + id + ", description=" + description + ", details=" + details + "]";
     }
-
 
 }
